@@ -5,16 +5,25 @@ import { AppComponent } from './app.component';
 import { CribListingComponent } from './crib-listing/crib-listing.component';
 import { CribCardComponent } from './crib-card/crib-card.component';
 
+//My imports
+import { Http, HttpModule } from '@angular/http';
+import {FormsModule } from '@angular/forms';
+import { CribsService } from './services/cribs.service';
+import { AddListingFormComponent } from './add-listing-form/add-listing-form.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     CribListingComponent,
-    CribCardComponent
+    CribCardComponent,
+    AddListingFormComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [CribsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
