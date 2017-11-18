@@ -22,7 +22,7 @@
           type="text"
           class="form-control"
           placeholder="Price"
-          name="price"
+          name="price" 
           ngModel
           required>
       </div>
@@ -37,7 +37,7 @@
           <option
             *ngFor="let type of propertyTypes"
             [value]="type">
-              {{ utilService.capitalize(type) }}
+              {{ type }}
           </option>
         </select>
       </div>
